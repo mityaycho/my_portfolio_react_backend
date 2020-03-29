@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const nodemailer = require("nodemailer");
+const nodemailer = require('nodemailer');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
@@ -22,7 +22,7 @@ let transporter = nodemailer.createTransport({
 
 app.use(cors());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json())
+app.use(bodyParser.json());
 
 app.get('/', function (req, res) {
   res.send('My portfolio');
@@ -37,13 +37,14 @@ app.post('/sendMessage', async function (req, res) {
 		to: 'mityaycho@gmail.com',
 		subject: 'Job', 
 		html: `
-		<b>Сообщение из формы обратной связи <em>portfolio</em>!</b>
+		<b>Сообщение из формы обратной связи <h1>portfolio</h1>!</b>
 		<div>Name: ${name}</div>
 		<div>Contacts: ${contacts}</div>
 		<div>Message: ${message}</div>
 		`
-	})
-	res.send(info)
+	});
+
+	res.send(info);
 });
 
 let port = process.env.PORT || 3010;
