@@ -37,7 +37,7 @@ app.post('/sendMessage', async function (req, res) {
 		to: 'mityaycho@gmail.com',
 		subject: 'Job', 
 		html: `
-		<b>Сообщение из формы обратной связи <h1>portfolio</h1>!</b>
+		<b>Сообщение из формы обратной связи <h5>my_portfolio_react</h5>!</b>
 		<div>Name: ${name}</div>
 		<div>Contacts: ${contacts}</div>
 		<div>Message: ${message}</div>
