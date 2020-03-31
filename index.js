@@ -4,11 +4,11 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-let smtp_login = process.env.SMTP_LOGIN || "---";
-let smtp_password = process.env.SMTP_PASSWORD || "---";
+let smtp_login = process.env.SMTP_LOGIN || '---';
+let smtp_password = process.env.SMTP_PASSWORD || '---';
 
 let transporter = nodemailer.createTransport({
-	service: "gmail",
+	service: 'gmail',
 	secure: false,
 	port: 25,
 	tls: {
